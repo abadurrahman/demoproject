@@ -2570,6 +2570,72 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     if (!User.loggedIn()) {
@@ -47802,89 +47868,66 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("div", { staticClass: "sl-mainpanel" }, [
-      _vm._m(0),
-      _vm._v(" "),
-      _c("div", { staticClass: "sl-pagebody" }, [
-        _c("div", { staticClass: "card pd-20 pd-sm-40" }, [
-          _c(
-            "h6",
-            { staticClass: "card-body-title" },
-            [
-              _vm._v("Add Category\n       "),
-              _c(
-                "router-link",
-                {
-                  staticClass: "btn btn-sm btn-warning",
-                  staticStyle: { float: "right" },
-                  attrs: {
-                    to: "/all-category",
-                    "data-toggle": "modal",
-                    "data-target": "#modaldemo3"
-                  }
-                },
-                [_vm._v("All Category")]
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "form",
-            {
-              on: {
-                submit: function($event) {
-                  $event.preventDefault()
-                  return _vm.categoryInsert($event)
-                }
-              }
-            },
-            [
-              _c("div", { staticClass: "form-layout" }, [
-                _c("div", { staticClass: "row mg-b-25" }, [
-                  _c("div", { staticClass: "col-lg-12" }, [
-                    _c("div", { staticClass: "form-group" }, [
-                      _vm._m(1),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "container-fluid mt--6" }, [
+      _c("div", { staticClass: "row" }, [
+        _vm._m(1),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-xl-3 order-xl-1" }, [
+          _c("div", { staticClass: "card" }, [
+            _vm._m(2),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-body" }, [
+              _c("form", [
+                _c("div", { staticClass: "pl-lg-4" }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c("div", { staticClass: "col-lg-12" }, [
+                      _c("div", { staticClass: "form-group" }, [
+                        _c(
+                          "label",
                           {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.form.category_name,
-                            expression: "form.category_name"
+                            staticClass: "form-control-label",
+                            attrs: { for: "name" }
+                          },
+                          [_vm._v("Category Name*")]
+                        ),
+                        _vm._v(" "),
+                        _c("input", {
+                          staticClass:
+                            "form-control @error('name') is-invalid @enderror",
+                          attrs: {
+                            type: "text",
+                            id: "name",
+                            name: "name",
+                            placeholder: "Category Name"
                           }
-                        ],
-                        staticClass: "form-control",
-                        attrs: { type: "text" },
-                        domProps: { value: _vm.form.category_name },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.form,
-                              "category_name",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _vm.errors.category_name
-                        ? _c("small", { staticClass: "text-danger" }, [
-                            _vm._v(_vm._s(_vm.errors.category_name[0]))
-                          ])
-                        : _vm._e()
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            staticClass: "invalid-feedback",
+                            attrs: { role: "alert" }
+                          },
+                          [_c("strong", [_vm._v(_vm._s(_vm.$message))])]
+                        )
+                      ])
                     ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _vm._m(2)
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-primary",
+                      attrs: { type: "submit" }
+                    },
+                    [_vm._v("Save Category")]
+                  )
+                ])
               ])
-            ]
-          )
+            ])
+          ])
         ])
       ])
     ])
@@ -47895,13 +47938,48 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("nav", { staticClass: "breadcrumb sl-breadcrumb" }, [
-      _c("a", { staticClass: "breadcrumb-item", attrs: { href: "#" } }, [
-        _vm._v("Starlight")
-      ]),
-      _vm._v(" "),
-      _c("span", { staticClass: "breadcrumb-item active" }, [
-        _vm._v("Electronic Section")
+    return _c("div", { staticClass: "header bg-primary pb-6" }, [
+      _c("div", { staticClass: "container-fluid" }, [
+        _c("div", { staticClass: "header-body" }, [
+          _c("div", { staticClass: "row align-items-center py-4" }, [
+            _c("div", { staticClass: "col-lg-6 col-7" }, [
+              _c("h6", { staticClass: "h2 text-white d-inline-block mb-0" }, [
+                _vm._v("Category")
+              ]),
+              _vm._v(" "),
+              _c(
+                "nav",
+                {
+                  staticClass: "d-none d-md-inline-block ml-md-4",
+                  attrs: { "aria-label": "breadcrumb" }
+                },
+                [
+                  _c(
+                    "ol",
+                    {
+                      staticClass: "breadcrumb breadcrumb-links breadcrumb-dark"
+                    },
+                    [
+                      _c("li", { staticClass: "breadcrumb-item" }, [
+                        _c("a", { attrs: { href: "#" } }, [
+                          _c("i", { staticClass: "fas fa-home" })
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", { staticClass: "breadcrumb-item" }, [
+                        _c("a", { attrs: { href: "#" } }, [_vm._v("Category")])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", { staticClass: "breadcrumb-item active" }, [
+                        _c("a", { attrs: { href: "#" } }, [_vm._v("List")])
+                      ])
+                    ]
+                  )
+                ]
+              )
+            ])
+          ])
+        ])
       ])
     ])
   },
@@ -47909,21 +47987,93 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("label", { staticClass: "form-control-label" }, [
-      _vm._v("Category Name: "),
-      _c("span", { staticClass: "tx-danger" }, [_vm._v("*")])
+    return _c("div", { staticClass: "col-xl-9 order-xl-2" }, [
+      _c("div", { staticClass: "card card-profile" }, [
+        _c("div", { staticClass: "card-body pt-0" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "card-body" }, [
+              _c("div", { staticClass: "card-header" }, [
+                _c("h3", { staticClass: "mb-0" }, [_vm._v("Category")])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "table-responsive py-4" }, [
+                _c(
+                  "table",
+                  {
+                    staticClass: "table table-flush",
+                    staticStyle: { width: "100%" },
+                    attrs: { id: "datatable-buttons" }
+                  },
+                  [
+                    _c("thead", { staticClass: "thead-light" }, [
+                      _c("tr", [
+                        _c("th", [_vm._v("ID")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Category Name")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Created At")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Actions")])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tbody", [
+                      _c("tr", [
+                        _c("td", [_vm._v("hjbvj")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("hvjn")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("bv")]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "btn btn-sm btn-info",
+                              attrs: { id: "edit", href: "" }
+                            },
+                            [_vm._v("Edit")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "form",
+                            {
+                              staticStyle: { display: "inline-block" },
+                              attrs: { action: "", method: "POST" }
+                            },
+                            [
+                              _c(
+                                "button",
+                                {
+                                  staticClass: "btn btn-sm btn-danger",
+                                  attrs: { type: "submit" }
+                                },
+                                [_vm._v("Delete")]
+                              )
+                            ]
+                          )
+                        ])
+                      ])
+                    ])
+                  ]
+                )
+              ])
+            ])
+          ])
+        ])
+      ])
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-layout-footer" }, [
-      _c(
-        "button",
-        { staticClass: "btn btn-info mg-r-5", attrs: { type: "submit" } },
-        [_vm._v("Submit ")]
-      )
+    return _c("div", { staticClass: "card-header" }, [
+      _c("div", { staticClass: "row align-items-center" }, [
+        _c("div", { staticClass: "col-8" }, [
+          _c("h3", { staticClass: "mb-0" }, [_vm._v("Add Category")])
+        ])
+      ])
     ])
   }
 ]
