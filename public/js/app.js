@@ -2636,6 +2636,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     if (!User.loggedIn()) {
@@ -3853,6 +3856,158 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -47867,211 +48022,410 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _vm._m(0),
-    _vm._v(" "),
-    _c("div", { staticClass: "container-fluid mt--6" }, [
-      _c("div", { staticClass: "row" }, [
-        _vm._m(1),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-xl-3 order-xl-1" }, [
-          _c("div", { staticClass: "card" }, [
-            _vm._m(2),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body" }, [
-              _c("form", [
-                _c("div", { staticClass: "pl-lg-4" }, [
-                  _c("div", { staticClass: "row" }, [
-                    _c("div", { staticClass: "col-lg-12" }, [
-                      _c("div", { staticClass: "form-group" }, [
-                        _c(
-                          "label",
-                          {
-                            staticClass: "form-control-label",
-                            attrs: { for: "name" }
-                          },
-                          [_vm._v("Category Name*")]
-                        ),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass:
-                            "form-control @error('name') is-invalid @enderror",
-                          attrs: {
-                            type: "text",
-                            id: "name",
-                            name: "name",
-                            placeholder: "Category Name"
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "span",
-                          {
-                            staticClass: "invalid-feedback",
-                            attrs: { role: "alert" }
-                          },
-                          [_c("strong", [_vm._v(_vm._s(_vm.$message))])]
-                        )
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-primary",
-                      attrs: { type: "submit" }
-                    },
-                    [_vm._v("Save Category")]
-                  )
-                ])
-              ])
-            ])
-          ])
-        ])
-      ])
-    ])
-  ])
+  return _vm._m(0)
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "header bg-primary pb-6" }, [
-      _c("div", { staticClass: "container-fluid" }, [
-        _c("div", { staticClass: "header-body" }, [
-          _c("div", { staticClass: "row align-items-center py-4" }, [
-            _c("div", { staticClass: "col-lg-6 col-7" }, [
-              _c("h6", { staticClass: "h2 text-white d-inline-block mb-0" }, [
-                _vm._v("Category")
-              ]),
-              _vm._v(" "),
-              _c(
-                "nav",
-                {
-                  staticClass: "d-none d-md-inline-block ml-md-4",
-                  attrs: { "aria-label": "breadcrumb" }
-                },
-                [
-                  _c(
-                    "ol",
-                    {
-                      staticClass: "breadcrumb breadcrumb-links breadcrumb-dark"
-                    },
-                    [
-                      _c("li", { staticClass: "breadcrumb-item" }, [
-                        _c("a", { attrs: { href: "#" } }, [
-                          _c("i", { staticClass: "fas fa-home" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("li", { staticClass: "breadcrumb-item" }, [
-                        _c("a", { attrs: { href: "#" } }, [_vm._v("Category")])
-                      ]),
-                      _vm._v(" "),
-                      _c("li", { staticClass: "breadcrumb-item active" }, [
-                        _c("a", { attrs: { href: "#" } }, [_vm._v("List")])
-                      ])
-                    ]
-                  )
-                ]
-              )
-            ])
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-xl-9 order-xl-2" }, [
-      _c("div", { staticClass: "card card-profile" }, [
-        _c("div", { staticClass: "card-body pt-0" }, [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "card-body" }, [
-              _c("div", { staticClass: "card-header" }, [
-                _c("h3", { staticClass: "mb-0" }, [_vm._v("Category")])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "table-responsive py-4" }, [
+    return _c("div", [
+      _c("div", { staticClass: "header bg-primary pb-6" }, [
+        _c("div", { staticClass: "container-fluid" }, [
+          _c("div", { staticClass: "header-body" }, [
+            _c("div", { staticClass: "row align-items-center py-4" }, [
+              _c("div", { staticClass: "col-lg-6 col-7" }, [
+                _c("h6", { staticClass: "h2 text-white d-inline-block mb-0" }, [
+                  _vm._v("Category")
+                ]),
+                _vm._v(" "),
                 _c(
-                  "table",
+                  "nav",
                   {
-                    staticClass: "table table-flush",
-                    staticStyle: { width: "100%" },
-                    attrs: { id: "datatable-buttons" }
+                    staticClass: "d-none d-md-inline-block ml-md-4",
+                    attrs: { "aria-label": "breadcrumb" }
                   },
                   [
-                    _c("thead", { staticClass: "thead-light" }, [
-                      _c("tr", [
-                        _c("th", [_vm._v("ID")]),
+                    _c(
+                      "ol",
+                      {
+                        staticClass:
+                          "breadcrumb breadcrumb-links breadcrumb-dark"
+                      },
+                      [
+                        _c("li", { staticClass: "breadcrumb-item" }, [
+                          _c("a", { attrs: { href: "#" } }, [
+                            _c("i", { staticClass: "fas fa-home" })
+                          ])
+                        ]),
                         _vm._v(" "),
-                        _c("th", [_vm._v("Category Name")]),
+                        _c("li", { staticClass: "breadcrumb-item" }, [
+                          _c("a", { attrs: { href: "#" } }, [
+                            _vm._v("Category")
+                          ])
+                        ]),
                         _vm._v(" "),
-                        _c("th", [_vm._v("Created At")]),
-                        _vm._v(" "),
-                        _c("th", [_vm._v("Actions")])
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("tbody", [
-                      _c("tr", [
-                        _c("td", [_vm._v("hjbvj")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("hvjn")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("bv")]),
-                        _vm._v(" "),
-                        _c("td", [
-                          _c(
-                            "a",
-                            {
-                              staticClass: "btn btn-sm btn-info",
-                              attrs: { id: "edit", href: "" }
-                            },
-                            [_vm._v("Edit")]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "form",
-                            {
-                              staticStyle: { display: "inline-block" },
-                              attrs: { action: "", method: "POST" }
-                            },
-                            [
-                              _c(
-                                "button",
-                                {
-                                  staticClass: "btn btn-sm btn-danger",
-                                  attrs: { type: "submit" }
-                                },
-                                [_vm._v("Delete")]
-                              )
-                            ]
-                          )
+                        _c("li", { staticClass: "breadcrumb-item active" }, [
+                          _c("a", { attrs: { href: "#" } }, [_vm._v("List")])
                         ])
-                      ])
-                    ])
+                      ]
+                    )
                   ]
                 )
               ])
             ])
           ])
         ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card-header" }, [
-      _c("div", { staticClass: "row align-items-center" }, [
-        _c("div", { staticClass: "col-8" }, [
-          _c("h3", { staticClass: "mb-0" }, [_vm._v("Add Category")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticStyle: { padding: "25px", "margin-top": "-5.5rem" } }, [
+        _c("div", { staticClass: "card", staticStyle: { padding: "25px" } }, [
+          _c("div", { staticClass: "card-header" }, [
+            _c("h3", { staticClass: "mb-0" }, [_vm._v("Category")]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text-sm mb-0" })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "table-responsive py-4" }, [
+            _c(
+              "div",
+              {
+                staticClass: "dataTables_wrapper dt-bootstrap4",
+                attrs: { id: "datatable-basic_wrapper" }
+              },
+              [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-12 col-md-6" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "dataTables_length",
+                        attrs: { id: "datatable-basic_length" }
+                      },
+                      [
+                        _c("label", [
+                          _vm._v("Show "),
+                          _c(
+                            "select",
+                            {
+                              staticClass: "form-control form-control-sm",
+                              attrs: {
+                                name: "datatable-basic_length",
+                                "aria-controls": "datatable-basic"
+                              }
+                            },
+                            [
+                              _c("option", { attrs: { value: "10" } }, [
+                                _vm._v("10")
+                              ]),
+                              _c("option", { attrs: { value: "25" } }, [
+                                _vm._v("25")
+                              ]),
+                              _c("option", { attrs: { value: "50" } }, [
+                                _vm._v("50")
+                              ]),
+                              _c("option", { attrs: { value: "100" } }, [
+                                _vm._v("100")
+                              ])
+                            ]
+                          ),
+                          _vm._v(" entries")
+                        ])
+                      ]
+                    )
+                  ]),
+                  _c("div", { staticClass: "col-sm-12 col-md-6" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "dataTables_filter",
+                        attrs: { id: "datatable-basic_filter" }
+                      },
+                      [
+                        _c("label", [
+                          _vm._v("Search:"),
+                          _c("input", {
+                            staticClass: "form-control form-control-sm",
+                            attrs: {
+                              type: "search",
+                              placeholder: "",
+                              "aria-controls": "datatable-basic"
+                            }
+                          })
+                        ])
+                      ]
+                    )
+                  ])
+                ]),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-12" }, [
+                    _c(
+                      "table",
+                      {
+                        staticClass: "table table-flush dataTable",
+                        attrs: {
+                          id: "datatable-basic",
+                          role: "grid",
+                          "aria-describedby": "datatable-basic_info"
+                        }
+                      },
+                      [
+                        _c("thead", { staticClass: "thead-light" }, [
+                          _c("tr", { attrs: { role: "row" } }, [
+                            _c(
+                              "th",
+                              {
+                                staticClass: "sorting_asc",
+                                staticStyle: { width: "153px" },
+                                attrs: {
+                                  tabindex: "0",
+                                  "aria-controls": "datatable-basic",
+                                  rowspan: "1",
+                                  colspan: "1",
+                                  "aria-sort": "ascending",
+                                  "aria-label":
+                                    "Name: activate to sort column descending"
+                                }
+                              },
+                              [_vm._v("Name")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "th",
+                              {
+                                staticClass: "sorting",
+                                staticStyle: { width: "240px" },
+                                attrs: {
+                                  tabindex: "0",
+                                  "aria-controls": "datatable-basic",
+                                  rowspan: "1",
+                                  colspan: "1",
+                                  "aria-label":
+                                    "Position: activate to sort column ascending"
+                                }
+                              },
+                              [_vm._v("Createt At")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "th",
+                              {
+                                staticClass: "sorting",
+                                staticStyle: { width: "93px" },
+                                attrs: {
+                                  tabindex: "0",
+                                  "aria-controls": "datatable-basic",
+                                  rowspan: "1",
+                                  colspan: "1",
+                                  "aria-label":
+                                    "Salary: activate to sort column ascending"
+                                }
+                              },
+                              [_vm._v("Action")]
+                            )
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("tbody", [
+                          _c(
+                            "tr",
+                            { staticClass: "odd", attrs: { role: "row" } },
+                            [
+                              _c("td", [_vm._v("Accountant")]),
+                              _vm._v(" "),
+                              _c("td", [_vm._v("Tokyo")]),
+                              _vm._v(" "),
+                              _c("td", [
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "btn btn-sm btn-info",
+                                    attrs: { href: "" }
+                                  },
+                                  [_vm._v("Edit")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "btn btn-sm btn-danger",
+                                    attrs: { href: "" }
+                                  },
+                                  [_vm._v("Delete")]
+                                )
+                              ])
+                            ]
+                          )
+                        ])
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-12 col-md-5" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "dataTables_info",
+                        attrs: {
+                          id: "datatable-basic_info",
+                          role: "status",
+                          "aria-live": "polite"
+                        }
+                      },
+                      [_vm._v("Showing 1 to 10 of 57 entries\n              ")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-12 col-md-7" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "dataTables_paginate paging_simple_numbers",
+                        attrs: { id: "datatable-basic_paginate" }
+                      },
+                      [
+                        _c("ul", { staticClass: "pagination" }, [
+                          _c(
+                            "li",
+                            {
+                              staticClass:
+                                "paginate_button page-item previous disabled",
+                              attrs: { id: "datatable-basic_previous" }
+                            },
+                            [
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "page-link",
+                                  attrs: {
+                                    href: "#",
+                                    "aria-controls": "datatable-basic",
+                                    "data-dt-idx": "0",
+                                    tabindex: "0"
+                                  }
+                                },
+                                [_c("i", { staticClass: "fas fa-angle-left" })]
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "li",
+                            { staticClass: "paginate_button page-item active" },
+                            [
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "page-link",
+                                  attrs: {
+                                    href: "#",
+                                    "aria-controls": "datatable-basic",
+                                    "data-dt-idx": "1",
+                                    tabindex: "0"
+                                  }
+                                },
+                                [_vm._v("1")]
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "li",
+                            {
+                              staticClass: "paginate_button page-item next",
+                              attrs: { id: "datatable-basic_next" }
+                            },
+                            [
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "page-link",
+                                  attrs: {
+                                    href: "#",
+                                    "aria-controls": "datatable-basic",
+                                    "data-dt-idx": "7",
+                                    tabindex: "0"
+                                  }
+                                },
+                                [_c("i", { staticClass: "fas fa-angle-right" })]
+                              )
+                            ]
+                          )
+                        ])
+                      ]
+                    )
+                  ])
+                ])
+              ]
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "card mb-4" }, [
+          _c("div", { staticClass: "card-header" }, [
+            _c("h3", { staticClass: "mb-0" }, [_vm._v("Add Category")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-body" }, [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-12" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c(
+                    "label",
+                    {
+                      staticClass: "form-control-label",
+                      attrs: { for: "example3cols1Input" }
+                    },
+                    [_vm._v("Category Name*")]
+                  ),
+                  _vm._v(" "),
+                  _c("input", {
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "text",
+                      id: "example3cols1Input",
+                      placeholder: "Category Name"
+                    }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-12" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c(
+                    "label",
+                    {
+                      staticClass: "form-control-label",
+                      attrs: { for: "example3cols2Input" }
+                    },
+                    [_vm._v("Slug*")]
+                  ),
+                  _vm._v(" "),
+                  _c("input", {
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "text",
+                      id: "example3cols2Input",
+                      placeholder: "Slug"
+                    }
+                  })
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-primary",
+                staticStyle: { "margin-top": "15px" },
+                attrs: { type: "submit" }
+              },
+              [_vm._v("Save Category")]
+            )
+          ])
         ])
       ])
     ])
@@ -50377,89 +50731,107 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("div", { staticClass: "sl-mainpanel" }, [
-      _vm._m(0),
-      _vm._v(" "),
-      _c("div", { staticClass: "sl-pagebody" }, [
-        _c("div", { staticClass: "card pd-20 pd-sm-40" }, [
-          _c(
-            "h6",
-            { staticClass: "card-body-title" },
-            [
-              _vm._v("Add SubCategory\n       "),
-              _c(
-                "router-link",
-                {
-                  staticClass: "btn btn-sm btn-warning",
-                  staticStyle: { float: "right" },
-                  attrs: {
-                    to: "/all-subcategory",
-                    "data-toggle": "modal",
-                    "data-target": "#modaldemo3"
-                  }
-                },
-                [_vm._v("All SubCategory")]
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "form",
-            {
-              on: {
-                submit: function($event) {
-                  $event.preventDefault()
-                  return _vm.subcategoryInsert($event)
-                }
-              }
-            },
-            [
-              _c("div", { staticClass: "form-layout" }, [
-                _c("div", { staticClass: "row mg-b-25" }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "container-fluid mt--6" }, [
+      _c("div", { staticClass: "row" }, [
+        _vm._m(1),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-xl-3 order-xl-1" }, [
+          _c("div", { staticClass: "card" }, [
+            _vm._m(2),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-body" }, [
+              _c("form", [
+                _c("div", { staticClass: "row" }, [
                   _c("div", { staticClass: "col-lg-12" }, [
                     _c("div", { staticClass: "form-group" }, [
-                      _vm._m(1),
+                      _c(
+                        "label",
+                        {
+                          staticClass: "form-control-label",
+                          attrs: { for: "name" }
+                        },
+                        [_vm._v("Category Name*")]
+                      ),
                       _vm._v(" "),
                       _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.form.subcategory_name,
-                            expression: "form.subcategory_name"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: { type: "text" },
-                        domProps: { value: _vm.form.subcategory_name },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.form,
-                              "subcategory_name",
-                              $event.target.value
-                            )
-                          }
+                        staticClass:
+                          "form-control @error('name') is-invalid @enderror",
+                        attrs: {
+                          type: "text",
+                          id: "name",
+                          name: "name",
+                          placeholder: "Category Name"
                         }
                       }),
-                      _vm._v(" "),
-                      _vm.errors.subcategory_name
-                        ? _c("small", { staticClass: "text-danger" }, [
-                            _vm._v(_vm._s(_vm.errors.subcategory_name[0]))
-                          ])
-                        : _vm._e()
+                      _vm._v(
+                        "\n                        @error('name')\n                        "
+                      ),
+                      _c(
+                        "span",
+                        {
+                          staticClass: "invalid-feedback",
+                          attrs: { role: "alert" }
+                        },
+                        [_c("strong", [_vm._v(_vm._s(_vm.$message))])]
+                      ),
+                      _vm._v(
+                        "\n                        @enderror\n                  "
+                      )
                     ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _vm._m(2)
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-lg-12" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        {
+                          staticClass: "form-control-label",
+                          attrs: { for: "name" }
+                        },
+                        [_vm._v("Slug*")]
+                      ),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass:
+                          "form-control @error('name') is-invalid @enderror",
+                        attrs: {
+                          type: "text",
+                          id: "name",
+                          name: "slug",
+                          placeholder: "Slug"
+                        }
+                      }),
+                      _vm._v(
+                        "\n                        @error('name')\n                        "
+                      ),
+                      _c(
+                        "span",
+                        {
+                          staticClass: "invalid-feedback",
+                          attrs: { role: "alert" }
+                        },
+                        [_c("strong", [_vm._v(_vm._s(_vm.$message))])]
+                      ),
+                      _vm._v(
+                        "\n                        @enderror\n                  "
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-primary",
+                      attrs: { type: "submit" }
+                    },
+                    [_vm._v("Save Category")]
+                  )
+                ])
               ])
-            ]
-          )
+            ])
+          ])
         ])
       ])
     ])
@@ -50470,13 +50842,48 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("nav", { staticClass: "breadcrumb sl-breadcrumb" }, [
-      _c("a", { staticClass: "breadcrumb-item", attrs: { href: "#" } }, [
-        _vm._v("Starlight")
-      ]),
-      _vm._v(" "),
-      _c("span", { staticClass: "breadcrumb-item active" }, [
-        _vm._v("Electronic Section")
+    return _c("div", { staticClass: "header bg-primary pb-6" }, [
+      _c("div", { staticClass: "container-fluid" }, [
+        _c("div", { staticClass: "header-body" }, [
+          _c("div", { staticClass: "row align-items-center py-4" }, [
+            _c("div", { staticClass: "col-lg-6 col-7" }, [
+              _c("h6", { staticClass: "h2 text-white d-inline-block mb-0" }, [
+                _vm._v("Category")
+              ]),
+              _vm._v(" "),
+              _c(
+                "nav",
+                {
+                  staticClass: "d-none d-md-inline-block ml-md-4",
+                  attrs: { "aria-label": "breadcrumb" }
+                },
+                [
+                  _c(
+                    "ol",
+                    {
+                      staticClass: "breadcrumb breadcrumb-links breadcrumb-dark"
+                    },
+                    [
+                      _c("li", { staticClass: "breadcrumb-item" }, [
+                        _c("a", { attrs: { href: "#" } }, [
+                          _c("i", { staticClass: "fas fa-home" })
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", { staticClass: "breadcrumb-item" }, [
+                        _c("a", { attrs: { href: "#" } }, [_vm._v("Category")])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", { staticClass: "breadcrumb-item active" }, [
+                        _c("a", { attrs: { href: "#" } }, [_vm._v("List")])
+                      ])
+                    ]
+                  )
+                ]
+              )
+            ])
+          ])
+        ])
       ])
     ])
   },
@@ -50484,21 +50891,100 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("label", { staticClass: "form-control-label" }, [
-      _vm._v("SubCategory Name: "),
-      _c("span", { staticClass: "tx-danger" }, [_vm._v("*")])
+    return _c("div", { staticClass: "col-xl-9 order-xl-2" }, [
+      _c("div", { staticClass: "card card-profile" }, [
+        _c("div", { staticClass: "card-body pt-0" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "card-body" }, [
+              _c("div", { staticClass: "card-header" }, [
+                _c("h3", { staticClass: "mb-0" }, [_vm._v("Category")])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "table-responsive py-4" }, [
+                _c(
+                  "table",
+                  {
+                    staticClass: "table table-flush",
+                    staticStyle: { width: "100%" },
+                    attrs: { id: "datatable-buttons" }
+                  },
+                  [
+                    _c("thead", { staticClass: "thead-light" }, [
+                      _c("tr", [
+                        _c("th", [_vm._v("ID")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Category Name")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Created At")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Actions")])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tbody", [
+                      _c("tr", [
+                        _c("td", [_vm._v("1")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("hgh")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("cvcvbv")]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "btn btn-sm btn-info",
+                              attrs: { id: "edit", href: "" }
+                            },
+                            [_vm._v("Edit")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "form",
+                            { staticStyle: { display: "inline-block" } },
+                            [
+                              _vm._v(
+                                "\n                                        @csrf\n                                        @method('DELETE')\n                                        "
+                              ),
+                              _c(
+                                "button",
+                                {
+                                  staticClass: "btn btn-sm btn-danger",
+                                  attrs: {
+                                    type: "submit",
+                                    onclick:
+                                      "return(confirm('are you sure to delete?'))"
+                                  }
+                                },
+                                [_vm._v("Delete")]
+                              )
+                            ]
+                          )
+                        ])
+                      ]),
+                      _vm._v(
+                        "\n                            @endforeach\n                        "
+                      )
+                    ])
+                  ]
+                )
+              ])
+            ])
+          ])
+        ])
+      ])
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-layout-footer" }, [
-      _c(
-        "button",
-        { staticClass: "btn btn-info mg-r-5", attrs: { type: "submit" } },
-        [_vm._v("Submit ")]
-      )
+    return _c("div", { staticClass: "card-header" }, [
+      _c("div", { staticClass: "row align-items-center" }, [
+        _c("div", { staticClass: "col-8" }, [
+          _c("h3", { staticClass: "mb-0" }, [_vm._v("Add Category")])
+        ])
+      ])
     ])
   }
 ]

@@ -1,7 +1,7 @@
  <template>
   <div>
-    
-    <div class="header bg-primary pb-6">
+
+<div class="header bg-primary pb-6">
     <div class="container-fluid">
         <div class="header-body">
             <div class="row align-items-center py-4">
@@ -19,89 +19,92 @@
         </div>
     </div>
 </div>
-
-<div class="container-fluid mt--6">
-<div class="row">
-    <div class="col-xl-9 order-xl-2">
-      <div class="card card-profile">
-        <div class="card-body pt-0">
+<div style="padding:25px;margin-top:-5.5rem">
+   <div class="card" style="padding:25px;">
+            <!-- Card header -->
+            <div class="card-header">
+              <h3 class="mb-0">Category</h3>
+              <p class="text-sm mb-0">
+              </p>
+            </div>
+            <div class="table-responsive py-4">
+              <div id="datatable-basic_wrapper" class="dataTables_wrapper dt-bootstrap4"><div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="datatable-basic_length"><label>Show <select name="datatable-basic_length" aria-controls="datatable-basic" class="form-control form-control-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-12 col-md-6"><div id="datatable-basic_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="datatable-basic"></label></div></div></div><div class="row"><div class="col-sm-12"><table class="table table-flush dataTable" id="datatable-basic" role="grid" aria-describedby="datatable-basic_info">
+                <thead class="thead-light">
+                  <tr role="row">
+                    <th class="sorting_asc" tabindex="0" aria-controls="datatable-basic" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 153px;">Name</th>
+                    <th class="sorting" tabindex="0" aria-controls="datatable-basic" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 240px;">Createt At</th>
+                    <th class="sorting" tabindex="0" aria-controls="datatable-basic" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 93px;">Action</th>
+                  </tr>
+                </thead>
+          
+                <tbody>                 
+                 <tr role="row" class="odd">
+                    <td>Accountant</td>
+                    <td>Tokyo</td>
+                    <td>
+                      <a class="btn btn-sm btn-info" href="">Edit</a>
+                      <a class="btn btn-sm btn-danger" href="">Delete</a>
+                    </td>
+                 </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
           <div class="row">
-            <div class="card-body">
-                <div class="card-header">
-                    <h3 class="mb-0">Category</h3>
-                </div>
-                <div class="table-responsive py-4">
-                    <table class="table table-flush" style="width: 100%;" id="datatable-buttons">
-                        <thead class="thead-light">
-                            <tr>
-                                <th>ID</th>
-                                <th>Category Name</th>
-                                <th>Created At</th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            <tr>
-                                <td>hjbvj</td>
-                                <td>hvjn</td>
-                                <td>bv</td>
-                                <td>
-                                    <a class="btn btn-sm btn-info" id="edit" href="">Edit</a>
-                                    <form action="" method="POST"
-                                        style="display: inline-block;">
-                                       
-                                        <button type="submit" class="btn btn-sm btn-danger"
-                                          >Delete</button>
-                                    </form>
-                                </td>
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
+            <div class="col-sm-12 col-md-5">
+              <div class="dataTables_info" id="datatable-basic_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries
               </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-xl-3 order-xl-1">
-      <div class="card">
-        <div class="card-header">
-          <div class="row align-items-center">
-            <div class="col-8">
-              <h3 class="mb-0">Add Category</h3>
+            </div>
+            <div class="col-sm-12 col-md-7">
+              <div class="dataTables_paginate paging_simple_numbers" id="datatable-basic_paginate">
+                <ul class="pagination">
+                  <li class="paginate_button page-item previous disabled" id="datatable-basic_previous">
+                    <a href="#" aria-controls="datatable-basic" data-dt-idx="0" tabindex="0" class="page-link">
+                      <i class="fas fa-angle-left"></i>
+                    </a>
+                  </li>
+                  <li class="paginate_button page-item active">
+                    <a href="#" aria-controls="datatable-basic" data-dt-idx="1" tabindex="0" class="page-link">1</a>
+                  </li>
+                  <li class="paginate_button page-item next" id="datatable-basic_next">
+                    <a href="#" aria-controls="datatable-basic" data-dt-idx="7" tabindex="0" class="page-link"><i class="fas fa-angle-right"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-        <div class="card-body">
-        <form>
-           
-            <div class="pl-lg-4">
-              <div class="row">
-                <div class="col-lg-12">
-                  <div class="form-group">
-                    <label class="form-control-label" for="name">Category Name*</label>
-                    <input type="text" id="name" name="name" class="form-control @error('name') is-invalid @enderror" placeholder="Category Name">
-                      
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                       
-                  </div>
-                </div>
-              </div>
-              <button class="btn btn-primary" type="submit">Save Category</button>
-            </div>
-
-          </form>
-        </div>
-      </div>
-    </div>
+     </div>
   </div>
+  <div class="card mb-4">
+        <!-- Card header -->
+        <div class="card-header">
+          <h3 class="mb-0">Add Category</h3>
+        </div>
+        <!-- Card body -->
+        <div class="card-body">
+          <!-- Form groups used in grid -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label class="form-control-label" for="example3cols1Input">Category Name*</label>
+                <input type="text" class="form-control" id="example3cols1Input" placeholder="Category Name">
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group">
+                <label class="form-control-label" for="example3cols2Input">Slug*</label>
+                <input type="text" class="form-control" id="example3cols2Input" placeholder="Slug">
+              </div>
+            </div>            
+          </div>
+          <button class="btn btn-primary" style="margin-top:15px;" type="submit">Save Category</button>
+        </div>
+    </div>
 </div>
 
-  </div>
+ </div>
 </template>
 
 
