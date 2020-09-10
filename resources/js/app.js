@@ -18,6 +18,10 @@ window.User = User
 import Notification from './Helpers/Notification';
 window.Notification = Notification
 
+//pagination
+Vue.component('pagination', require('./components/partial/PaginationComponent.vue').default);
+
+
 
 //sweet alert start
 import Swal from 'sweetalert2'

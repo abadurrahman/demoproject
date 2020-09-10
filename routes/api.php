@@ -16,17 +16,23 @@ Route::group([
 });
 
 //category
-Route::post('/category','Api\CategoryController@store');
+Route::post('/addcategory','Api\CategoryController@store');
 Route::get('/all-category','Api\CategoryController@index');
 Route::get('/delete-category/{id}','Api\CategoryController@destroy');
 Route::get('/show-category/{id}','Api\CategoryController@show');
 Route::post('/update-category/{id}','Api\CategoryController@update');
 //subcategory
-Route::post('/subcategory','Api\SubcategoryController@store');
+Route::post('/addsubcategory','Api\SubcategoryController@store');
 Route::get('/all-subcategory','Api\SubcategoryController@index');
 Route::get('/delete-subcategory/{id}','Api\SubcategoryController@destroy');
 Route::get('/show-subcategory/{id}','Api\SubcategoryController@show');
 Route::post('/update-subcategory/{id}','Api\SubcategoryController@update');
+//tag
+Route::post('/addtag','Api\TagController@store');
+Route::get('/all-tag','Api\TagController@index');
+Route::get('/delete-tag/{id}','Api\TagController@destroy');
+Route::get('/show-tag/{id}','Api\TagController@show');
+Route::post('/update-tag/{id}','Api\TagController@update');
 //coupon
 Route::post('/coupon','Api\CouponController@store');
 Route::get('/all-coupon','Api\CouponController@index');

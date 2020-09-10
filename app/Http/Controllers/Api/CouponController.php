@@ -11,7 +11,7 @@ class CouponController extends Controller
 {
     public function index()
     {
-        $coupon=Coupon::all();
+        $coupon=DB::table('coupons')->orderBy('id','DESC')->paginate(10);
         //$category=DB::table('categories')->get();
         return response()->json($coupon);
     }

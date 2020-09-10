@@ -5,11 +5,11 @@
         <div class="header-body">
             <div class="row align-items-center py-4">
                 <div class="col-lg-6 col-7">
-                    <h6 class="h2 text-white d-inline-block mb-0">Category</h6>
+                    <h6 class="h2 text-white d-inline-block mb-0">Tag</h6>
                     <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                         <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                             <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
-                            <li class="breadcrumb-item"><a href="#">Category</a></li>
+                            <li class="breadcrumb-item"><a href="#">Tag</a></li>
                             <li class="breadcrumb-item active"><a href="#">List</a></li>
                         </ol>
                     </nav>
@@ -22,8 +22,8 @@
    <div class="card" style="padding:25px;">
             <!-- Card header -->
             <div class="card-header">
-              <h3 class="mb-0">Category</h3>
-              <router-link to="/add-category" class="btn btn-sm btn-primary float-right">Add-Category</router-link>
+              <h3 class="mb-0">Tag</h3>
+              <router-link to="/add-tag" class="btn btn-sm btn-primary float-right">Add-Tag</router-link>
               <p class="text-sm mb-0">
               </p>
             </div>
@@ -53,19 +53,19 @@
                   <thead class="thead-light">
                    <tr role="row">
                      <th class="sorting_asc" style="width: 153px;">SL:</th>
-                     <th class="sorting_asc" style="width: 153px;">Category Name:</th>
+                     <th class="sorting_asc" style="width: 153px;">Tag Name:</th>
                      <th class="sorting_asc" style="width: 153px;">Created At:</th>
                      <th class="sorting_asc" style="width: 153px;">Action:</th>   </tr>
                    </thead>
           
                 <tbody>                 
-                 <tr role="row" class="odd" v-for="(category,index) in filtersearch" :key="category.id">
+                 <tr role="row" class="odd" v-for="(tag,index) in filtersearch" :key="tag.id">
                     <td>{{index+1}}</td>
-                    <td>{{ category.category_name }}</td>
-                    <td>{{ category.created_at }}</td>
+                    <td>{{ tag.tag_name }}</td>
+                    <td>{{ tag.created_at }}</td>
                     <td>
-                      <router-link :to="{name: 'edit-category', params:{id: category.id} }" class="btn btn-sm btn-info" href="">Edit</router-link>
-                      <a class="btn btn-sm btn-danger" style="color:white;" @click="deleteCategory(category.id)">Delete</a>
+                      <router-link :to="{name: 'edit-tag', params:{id: tag.id} }" class="btn btn-sm btn-info" href="">Edit</router-link>
+                      <a class="btn btn-sm btn-danger" style="color:white;" @click="deleteTag(tag.id)">Delete</a>
                     </td>
                  </tr>
                 </tbody>
@@ -82,11 +82,11 @@
             <div class="col-sm-12 col-md-7">
               <div class="dataTables_paginate paging_simple_numbers" id="datatable-basic_paginate">
                 <ul class="pagination">
-                  <pagination
+              <pagination
                 v-if="pagination.last_page > 1"
                 :pagination="pagination"
                 :offset="5"
-                @paginate="allCategory()"
+                @paginate="allTag()"
               ></pagination>
                 </ul>
               </div>
@@ -113,12 +113,12 @@
 
 
         created(){
-        this.allCategory();
+        this.allTag();
         },
 
         data(){
           return{
-            categories:[],
+            tags:[],
             searchTerm:'',
             pagination: {
             current_page: 1
@@ -127,22 +127,22 @@
         },
        computed:{
          filtersearch(){
-          return this.categories.filter(category => {
-             return category.category_name.match(this.searchTerm)
+          return this.tags.filter(tag => {
+             return tag.tag_name.match(this.searchTerm)
            })
          }
        },
         methods:{
-          allCategory(){
-            axios.get("/api/all-category?page=" + this.pagination.current_page)
+          allTag(){
+            axios.get("/api/all-tag?page=" + this.pagination.current_page)
            .then(response => {
-          this.categories = response.data.data;
+          this.tags = response.data.data;
           this.pagination = response.data;
         })
          .catch()
           },
 
-          deleteCategory(id){
+          deleteTag(id){
             Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -153,14 +153,14 @@
             confirmButtonText: 'Yes, delete it!'
           }).then((result) => {
             if (result.value) {
-              axios.get('/api/delete-category/'+id)
+              axios.get('/api/delete-tag/'+id)
               .then(()=>{
-                 this.categories = this.categories.filter(category =>{
-                    return category.id !=id
+                 this.tags = this.tags.filter(tag =>{
+                    return tag.id !=id
                  })
               })
               .catch(()=>{
-                 this.$router.push({name: 'all-category'})
+                 this.$router.push({name: 'all-tag'})
               })
               Swal.fire(
                 'Deleted!',

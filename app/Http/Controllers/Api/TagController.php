@@ -4,27 +4,27 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Subcategory;
+use App\Tag;
 use DB;
 
-class SubcategoryController extends Controller
+class TagController extends Controller
 {
     public function index()
     {
-        //$subcategory=Subcategory::all();
-        $subcategory=DB::table('subcategories')->orderBy('id','DESC')->paginate(10);
-        return response()->json($subcategory);
+        //$category=Category::all()->orderBy('id','DESC');
+        $tag=DB::table('tags')->orderBy('id','DESC')->paginate(10);
+        return response()->json($tag);
     }
 
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-         'subcategory_name' => 'required|unique:subcategories|max:255',
+         'tag_name' => 'required|unique:tags|max:255',
         ]);
 
-           $subcategory = new Subcategory;
-           $subcategory->subcategory_name = $request->subcategory_name;
-           $subcategory->save();
+           $tag = new Tag;
+           $tag->tag_name = $request->tag_name;
+           $tag->save();
 
            //query builder
            // $data=array();
@@ -36,23 +36,23 @@ class SubcategoryController extends Controller
     {
        //query builder
         //$categoru=DB::table('categories')->where('id',$id)->first();
-        $subcategory=Subcategory::findorfail($id);
-         return response()->json($subcategory);
+        $tag=Tag::findorfail($id);
+         return response()->json($tag);
     }
 
 
      public function update(Request $request, $id)
     {
         $data=array();
-        $data['subcategory_name']=$request->subcategory_name;
-        DB::table('subcategories')->where('id',$id)->update($data);
+        $data['tag_name']=$request->tag_name;
+        DB::table('tags')->where('id',$id)->update($data);
         // $category=Category::findorfail($id);
         // $category->save();
     }
 
     public function destroy($id)
     {
-        DB::table('subcategories')->where('id',$id)->delete();
+        DB::table('tags')->where('id',$id)->delete();
         // $category=Category::findorfail($id);
         // $category->delete();
     }

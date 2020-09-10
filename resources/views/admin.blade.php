@@ -61,52 +61,22 @@
          <div class="collapse navbar-collapse" id="sidenav-collapse-main">
            <!-- Nav items -->
            <ul class="navbar-nav">
-             <li class="nav-item">
-               <a class="nav-link" href="">
-                 <i class="ni ni-shop text-primary"></i>
-                 <span class="nav-link-text">Dashboard</span>
-               </a>
-             </li>
-             <li class="nav-item">
-                <a class="nav-link" href="">
-                  <i class="ni ni-archive-2 text-green"></i>
-                  <span class="nav-link-text">Category</span>
-                </a>
-                <div class="ml-auto">
-                    <!-- Sidenav toggler -->
-                    <div class="sidenav-toggler d-none d-xl-block" data-action="sidenav-unpin" data-target="#sidenav-main">
-                        <div class="sidenav-toggler-inner">
-                            <i class="sidenav-toggler-line"></i>
-                            <i class="sidenav-toggler-line"></i>
-                            <i class="sidenav-toggler-line"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
+             
             <div class="navbar-inner">
                 <!-- Collapse -->
                 <div class="collapse navbar-collapse" id="sidenav-collapse-main">
                     <!-- Nav items -->
                     <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="ni ni-shop text-primary"></i>
-                                <span class="nav-link-text">Dashboard</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <div class="collapse" id="navbar-examples">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">Book Category</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-        
+                      <li class="nav-item">
+                         <router-link class="nav-link" to="/home">
+                          <i class="ni ni-shop text-primary"></i>
+                          <span class="nav-link-text">Dashboard</span>
+                          </router-link>
+                       </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="#categories" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="categories">
-                                <i class="ni ni-single-copy-04 text-black"></i>
+                                <i class="ni ni-archive-2 text-green"></i>
                                 <span class="nav-link-text">Categories</span>
                             </a>
                             <div class="collapse" id="categories">
@@ -115,7 +85,24 @@
                                         <router-link to="/add-category" class="nav-link ">Category</router-link>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="" class="nav-link ">All Category</a>
+                                        <router-link to="/all-category" class="nav-link ">All Category</router-link>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#subcategories" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="categories">
+                                <i class="ni ni-archive-2 text-green"></i>
+                                <span class="nav-link-text">Sub Categories</span>
+                            </a>
+                            <div class="collapse" id="subcategories">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <router-link to="/add-subcategory" class="nav-link ">SubCategory</router-link>
+                                    </li>
+                                    <li class="nav-item">
+                                        <router-link to="/all-subcategory" class="nav-link ">All SubCategory</router-link>
                                     </li>
                                 </ul>
                             </div>
@@ -123,16 +110,50 @@
 
                         <li class="nav-item">
                             <a class="nav-link" href="#tags" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="tags">
-                                <i class="ni ni-single-copy-04 text-black"></i>
+                                <i class="ni ni-single-copy-04 text-green"></i>
                                 <span class="nav-link-text">Tags</span>
                             </a>
                             <div class="collapse" id="tags">
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
-                                        <a href="" class="nav-link ">Add Tag</a>
+                                        <router-link to="/add-tag" class="nav-link ">Add Tag</router-link>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="" class="nav-link ">All Tag</a>
+                                        <router-link to="/all-tag" class="nav-link ">All Tag</router-link>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#coupon" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="coupon">
+                                <i class="ni ni-single-copy-04 text-green"></i>
+                                <span class="nav-link-text">Coupon</span>
+                            </a>
+                            <div class="collapse" id="coupon">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <router-link to="/add-coupon" class="nav-link ">Coupon</router-link>
+                                    </li>
+                                    <li class="nav-item">
+                                        <router-link to="/all-coupon" class="nav-link ">All Coupon</router-link>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#brand" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="brand">
+                                <i class="ni ni-single-copy-04 text-green"></i>
+                                <span class="nav-link-text">Brand</span>
+                            </a>
+                            <div class="collapse" id="brand">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <router-link to="/add-brand" class="nav-link ">Brand</router-link>
+                                    </li>
+                                    <li class="nav-item">
+                                        <router-link to="/all-brand" class="nav-link ">All Brand</router-link>
                                     </li>
                                 </ul>
                             </div>
@@ -442,10 +463,10 @@
                  <div class="dropdown-header noti-title">
                    <h6 class="text-overflow m-0">Welcome!</h6>
                  </div>
-                 <a href="/pages/examples/profile.html" class="dropdown-item">
+                 <router-link to="/user-profile" class="dropdown-item">
                    <i class="ni ni-single-02"></i>
                    <span>My profile</span>
-                 </a>
+                 </router-link>
                  <a href="#!" class="dropdown-item">
                    <i class="ni ni-settings-gear-65"></i>
                    <span>Settings</span>
@@ -455,14 +476,10 @@
                    <span>Activity</span>
                  </a>
                  <div class="dropdown-divider"></div>
-                 <a class="dropdown-item" href="{{ url('logout') }}" onclick="event.preventDefault();
-                 document.getElementById('logout-form').submit();">
-                 <i class="fa fa-sign-out fa-lg"></i>
-                 <span>{{ __('Logout') }}</span>
-                </a>
-                <form id="logout-form" action="{{ url('logout') }}" method="POST" style="display: none;">
-                 @csrf
-                </form>
+                 <router-link to="/logout" class="dropdown-item">
+                   <i class="ni ni-calendar-grid-58"></i>
+                   <span>Logout</span>
+                 </router-link>
                </div>
              </li>
            </ul>
@@ -481,7 +498,7 @@
    <!-- Argon Scripts -->
    <!-- Core -->
    <script src="{{asset('js/app.js')}}" type="text/javascript"></script>
-      <script src="{{ asset('backend/assets/vendor/jquery/dist/jquery.min.js') }}"></script>
+   <script src="{{ asset('backend/assets/vendor/jquery/dist/jquery.min.js') }}"></script>
 
    
    <!-- <script src="{{ asset('backend/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script> -->
@@ -515,67 +532,10 @@
    <!-- Toastr -->
    <script src="{{asset('backend/assets/js/toastr.min.js')}}"></script>
 
-   <script type="text/javascript">
-       @if(Session::has('message'))
-       var type = "{{Session::get('alert-type', 'info')}}"
-       switch (type) {
-           case 'info':
-               toastr.info("{{ Session::get('message') }}");
-               break;
-           case 'success':
-               toastr.success("{{ Session::get('message') }}");
-               break;
-           case 'warning':
-               toastr.warning("{{ Session::get('message') }}");
-               break;
-           case 'error':
-               toastr.error("{{ Session::get('message') }}");
-               break;
-       }
-       @endif
 
-   </script>
 
    <!-- sweet alerts -->
    <script src="{{asset('backend/assets/js/sweetalert.min.js')}}"></script>
-   <script>
-       $(document).on("click", "#delete", function(e) {
-           e.preventDefault();
-           var link = $(this).attr("href");
-           swal({
-                   title: "Are you sure?"
-                   , text: "Once deleted, you will not be able to recover this file!"
-                   , icon: "warning"
-                   , buttons: true
-                   , dangerMode: true
-               , })
-               .then((willDelete) => {
-                   if (willDelete) {
-                       window.location.href = link;
-                   }
-               });
-       });
-
-   </script>
-   <script>
-       $(document).on("click", "#edit", function(e) {
-           e.preventDefault();
-           var link = $(this).attr("href");
-           swal({
-                   title: "Are you sure?"
-                   , text: "Any Change can not be undo."
-                   , icon: "info"
-                   , buttons: true
-                   , dangerMode: true
-               , })
-               .then((willEdit) => {
-                   if (willEdit) {
-                       window.location.href = link;
-                   }
-               });
-       });
-
-   </script>
 
    @stack('scripts')
  </body>

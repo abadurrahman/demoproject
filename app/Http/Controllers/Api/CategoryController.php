@@ -8,13 +8,12 @@ use App\Category;
 use DB;
 
 
-
 class CategoryController extends Controller
 {
     public function index()
     {
-        $category=Category::all();
-        //$category=DB::table('categories')->get();
+        //$category=Category::all()->orderBy('id','DESC');
+        $category=DB::table('categories')->orderBy('id','DESC')->paginate(10);
         return response()->json($category);
     }
 

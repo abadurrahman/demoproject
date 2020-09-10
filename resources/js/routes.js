@@ -17,6 +17,10 @@ let editcoupon = require('./components/coupon/edit.vue').default;
 let allsubcategory = require('./components/subcategory/index.vue').default;
 let addsubcategory = require('./components/subcategory/create.vue').default;
 let editsubcategory = require('./components/subcategory/edit.vue').default;
+//tag
+let alltag = require('./components/tag/index.vue').default;
+let addtag = require('./components/tag/create.vue').default;
+let edittag = require('./components/tag/edit.vue').default;
 //brand
 let addbrand = require('./components/brand/create.vue').default;
 let allbrand = require('./components/brand/index.vue').default;
@@ -25,7 +29,10 @@ let editbrand = require('./components/brand/edit.vue').default;
 let addproduct = require('./components/product/create.vue').default;
 let allproduct = require('./components/product/index.vue').default;
 let editproduct = require('./components/product/edit.vue').default;
-let product = require('./components/uroduct/product.vue').default;
+//user
+let userprofile = require('./components/profile/profile.vue').default;
+let editprofile = require('./components/profile/edit_profile.vue').default;
+
 
 
 
@@ -47,6 +54,10 @@ export const routes = [
   { path: '/all-subcategory', component: allsubcategory , name:'all-subcategory' },
   { path: '/add-subcategory', component: addsubcategory , name:'add-subcategory' },
   { path: '/edit-subcategory', component: editsubcategory , name:'edit-subcategory' },
+     //tag
+  { path: '/all-tag', component: alltag , name:'all-tag' },
+  { path: '/add-tag', component: addtag , name:'add-tag' },
+  { path: '/edit-tag', component: edittag , name:'edit-tag' },
   //brand
   { path: '/add-brand', component: addbrand , name:'add-brand' },
   { path: '/all-brand', component: allbrand , name:'all-brand' },
@@ -55,5 +66,9 @@ export const routes = [
   { path: '/add-product', component: addproduct , name:'add-product' },
   { path: '/all-product', component: allproduct , name:'all-product' },
   { path: '/edit-product', component: editproduct , name:'edit-product' },
-  { path: '/product', component: product , name:'product' },
+    //user
+  { path: '/user-profile', component: userprofile , name:'user-profile' },
+  { path: '/edit-profile', component: editprofile , name:'edit-profile' },
+
+
 ]

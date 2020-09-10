@@ -1,50 +1,106 @@
  <template>
-    <div>
+ <div>
+  <div class="header bg-primary pb-6">
+    <div class="container-fluid">
+        <div class="header-body">
+            <div class="row align-items-center py-4">
+                <div class="col-lg-6 col-7">
+                    <h6 class="h2 text-white d-inline-block mb-0">Coupon</h6>
+                    <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                        <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                            <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                            <li class="breadcrumb-item"><a href="#">Coupon</a></li>
+                            <li class="breadcrumb-item active"><a href="#">List</a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+ <div style="padding:25px;margin-top:-5.5rem">
+   <div class="card" style="padding:25px;">
+            <!-- Card header -->
+            <div class="card-header">
+              <h3 class="mb-0">Coupon</h3>
+              <router-link to="/add-coupon" class="btn btn-sm btn-primary float-right">Add-Coupon</router-link>
+              <p class="text-sm mb-0">
+              </p>
+            </div>
+            <div class="table-responsive py-4">
+              <div id="datatable-basic_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                <div class="row">
+                  <div class="col-sm-12 col-md-6">
+                    <div class="dataTables_length" id="datatable-basic_length">
+                      <label>Show Data <!-- <select name="datatable-basic_length" aria-controls="datatable-basic" class="form-control form-control-sm">
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                      </select> --> entries</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6">
+                    <div id="datatable-basic_filter" class="dataTables_filter">
+                      <label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="datatable-basic" v-model="searchTerm"></label>
+                </div>
+              </div>
+            </div>
 
-  <!-- ########## START: MAIN PANEL ########## -->
-    <div class="sl-mainpanel">
-        <div class="sl-pagebody">
-        <div class="sl-page-title">
-          <h5>Coupon Table</h5>
-        </div><!-- sl-page-title -->
+            <div class="row">
+              <div class="col-sm-12">
+               <table class="table table-flush dataTable table table-hover" id="datatable-basic" role="grid" aria-describedby="datatable-basic_info">
+                  <thead class="thead-light">
+                   <tr role="row">
+                     <th class="sorting_asc" style="width: 153px;">SL:</th>
+                     <th class="sorting_asc" style="width: 153px;">Coupon Name:</th>
+                     <th class="sorting_asc" style="width: 153px;">Discount:</th>
+                     <th class="sorting_asc" style="width: 153px;">Created At:</th>
+                     <th class="sorting_asc" style="width: 153px;">Action:</th>   </tr>
+                   </thead>
+          
+                <tbody>                 
+                 <tr role="row" class="odd" v-for="(coupon,index) in filtersearch" :key="coupon.id">
+                    <td>{{index+1}}</td>
+                    <td>{{ coupon.coupon_name }}</td>
+                    <td>{{ coupon.discount }}</td>
+                    <td>{{ coupon.created_at }}</td>
+                    <td>
+                      <router-link :to="{name: 'edit-coupon', params:{id: coupon.id} }" class="btn btn-sm btn-info" href="">Edit</router-link>
+                      <a class="btn btn-sm btn-danger" style="color:white;" @click="deleteCoupon(coupon.id)">Delete</a>
+                    </td>
+                 </tr>
+                </tbody>
+              </table>
+            </div>
+    </div>
 
-        <div class="card pd-20 pd-sm-40">
-          <h6 class="card-body-title">Coupon List
-          <router-link to="/add-coupon" class="btn btn-sm btn-warning" style="float: right;" data-toggle="modal" data-target="#modaldemo3">Add Coupon</router-link>
-          </h6>
-           
-           <br>
-          <div class="table-wrapper">
-            <table id="datatable1" class="table display responsive nowrap">
-              <thead>
-                <tr>
-                  <th class="wd-15p">ID</th>
-                  <th class="wd-15p">Coupon Code</th>
-                  <th class="wd-15p">Discount</th>
-                  <th class="wd-20p">Action</th>               
-                </tr>
-              </thead>
-              <tbody>
-               
-                <tr v-for="(coupon,index) in filtersearch" :key="coupon.id">
-                  <td>{{index+1}}</td>
-                  <td>{{ coupon.coupon_name }}</td>
-                  <td>{{ coupon.discount }}</td>
-                  <td>
-                    <router-link :to="{name: 'edit-coupon', params:{id: coupon.id} }" class="btn btn-sm btn-info">edit</router-link>
-                    <a @click="deleteCoupon(coupon.id)" class="btn btn-sm btn-danger">Delete</a>
-                  </td>               
-                </tr>   
-               
-              </tbody>
-            </table>
-          </div><!-- table-wrapper -->
-        </div><!-- card -->    
-     </div>  
-   </div>
+          <div class="row">
+
+            <div class="col-sm-12 col-md-5">
+              <div class="dataTables_info" id="datatable-basic_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-7">
+              <div class="dataTables_paginate paging_simple_numbers" id="datatable-basic_paginate">
+                <ul class="pagination">
+                  <pagination
+                v-if="pagination.last_page > 1"
+                :pagination="pagination"
+                :offset="5"
+                @paginate="allCoupon()"
+              ></pagination>
+                </ul>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+     </div>
+  </div>
  </div>
-   
-
+</div>
+</div>
 </template>
 
 
@@ -65,7 +121,10 @@
         data(){
           return{
             coupons:[],
-            searchTerm:'',         
+            searchTerm:'',
+            pagination: {
+            current_page: 1
+          }         
           }
         },
        computed:{
@@ -77,10 +136,14 @@
        },
         methods:{
           allCoupon(){
-            axios.get('/api/all-coupon/')
-            .then(({data}) => (this.coupons = data))
-            .catch()
+            axios.get("/api/all-coupon?page=" + this.pagination.current_page)
+           .then(response => {
+          this.coupons = response.data.data;
+          this.pagination = response.data;
+        })
+         .catch()
           },
+
           deleteCoupon(id){
             Swal.fire({
             title: 'Are you sure?',
