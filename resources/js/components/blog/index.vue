@@ -23,7 +23,7 @@
             <!-- Card header -->
             <div class="card-header">
               <h3 class="mb-0">Brand</h3>
-              <router-link to="/add-brand" class="btn btn-sm btn-primary float-right">Add-Brand</router-link>
+              <router-link to="/add-blog" class="btn btn-sm btn-primary float-right">Add-Brand</router-link>
               <p class="text-sm mb-0">
               </p>
             </div>
@@ -53,21 +53,21 @@
                   <thead class="thead-light">
                    <tr role="row">
                      <th class="sorting_asc" style="width: 153px;">SL:</th>
-                     <th class="sorting_asc" style="width: 153px;">Brand Name:</th>
+                     <th class="sorting_asc" style="width: 153px;">Title:</th>
                      <th class="sorting_asc" style="width: 153px;">Image:</th>
                      <th class="sorting_asc" style="width: 153px;">Created At:</th>
                      <th class="sorting_asc" style="width: 153px;">Action:</th>   </tr>
                    </thead>
           
                 <tbody>                 
-                 <tr role="row" class="odd" v-for="(brand,index) in filtersearch" :key="brand.id">
+                 <tr role="row" class="odd" v-for="(blog,index) in filtersearch" :key="blog.id">
                     <td>{{index+1}}</td>
-                    <td>{{ brand.brand_name }}</td>
-                    <td><img :src="brand.photo" style="height:55px; width:45px;"></td>
-                    <td>{{ brand.created_at }}</td>
+                    <td>{{ blog.title }}</td>
+                    <td><img :src="blog.photo" style="height:55px; width:45px;"></td>
+                    <td>{{ blog.created_at }}</td>
                     <td>
-                      <router-link :to="{name: 'edit-brand', params:{id: brand.id} }" class="btn btn-sm btn-info" href="">Edit</router-link>
-                      <a class="btn btn-sm btn-danger" style="color:white;" @click="deleteBrand(brand.id)">Delete</a>
+                      <router-link :to="{name: 'edit-blog', params:{id: blog.id} }" class="btn btn-sm btn-info" href="">Edit</router-link>
+                      <a class="btn btn-sm btn-danger" style="color:white;" @click="deleteBlog(blog.id)">Delete</a>
                     </td>
                  </tr>
                 </tbody>
@@ -88,7 +88,7 @@
                 v-if="pagination.last_page > 1"
                 :pagination="pagination"
                 :offset="5"
-                @paginate="allBrand()"
+                @paginate="allBlog()"
               ></pagination>
                 </ul>
               </div>
@@ -115,12 +115,12 @@
 
 
         created(){
-        this.allBrand();
+        this.allBlog();
         },
 
         data(){
           return{
-            brands:[],
+            blogs:[],
             searchTerm:'',
             pagination: {
             current_page: 1
@@ -129,22 +129,22 @@
         },
        computed:{
          filtersearch(){
-          return this.brands.filter(brand => {
-             return brand.brand_name.match(this.searchTerm)
+          return this.blogs.filter(blog => {
+             return blog.title.match(this.searchTerm)
            })
          }
        },
         methods:{
-          allBrand(){
-            axios.get("/api/all-brand?page=" + this.pagination.current_page)
+          allBlog(){
+            axios.get("/api/all-blog?page=" + this.pagination.current_page)
            .then(response => {
-          this.brands = response.data.data;
+          this.blogs = response.data.data;
           this.pagination = response.data;
         })
          .catch()
           },
 
-          deleteBrand(id){
+          deleteBlog(id){
             Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -155,14 +155,14 @@
             confirmButtonText: 'Yes, delete it!'
           }).then((result) => {
             if (result.value) {
-              axios.get('/api/delete-brand/'+id)
+              axios.get('/api/delete-blog/'+id)
               .then(()=>{
-                 this.brands = this.brands.filter(brand =>{
-                    return brand.id !=id
+                 this.blogs = this.blogs.filter(blog =>{
+                    return blog.id !=id
                  })
               })
               .catch(()=>{
-                 this.$router.push({name: 'all-brand'})
+                 this.$router.push({name: 'all-blog'})
               })
               Swal.fire(
                 'Deleted!',

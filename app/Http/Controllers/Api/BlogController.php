@@ -1,26 +1,27 @@
 <?php
 
 namespace App\Http\Controllers\Api;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use DB;
 use Image;
-use App\Brand;
+use App\Blog;
 
-class BrandController extends Controller
+class BlogController extends Controller
 {
-
-    public function index()
+       public function index()
     {
         //$brand=Brand::all();
-        $brand=DB::table('brands')->orderBy('id','DESC')->paginate(10);
-        return response()->json($brand);
+        $blog=DB::table('blogs')->orderBy('id','DESC')->paginate(10);
+        return response()->json($blog);
     }
     
      public function store(Request $request)
     {
          $validatedData = $request->validate([
-             'brand_name' => 'required|unique:brands|max:255',
+             'title' => 'required|unique:blogs|max:255',
+             'details' => 'required',
          ]);
 
            if($request->photo){
@@ -29,18 +30,27 @@ class BrandController extends Controller
                    $ext=explode('/', $sub)[1];
                    $name=time().".".$ext;
                    $img=Image::make($request->photo)->resize(240,200);
-                   $upload_path='backend/brand/';
+                   $upload_path='backend/blog/';
                    $image_url=$upload_path.$name;
                    $img->save($image_url);
 
-                   $brand = new Brand;
-                   $brand->brand_name = $request->brand_name;
-                   $brand->photo =  $image_url;
-                   $brand->save();
+                   $blog = new Blog;
+                   $blog->title = $request->title;
+                   $blog->date = $request->date;
+                   $blog->details = $request->details;
+                   $blog->main = $request->main;
+                   $blog->latest = $request->latest;
+                   $blog->photo =  $image_url;
+                   $blog->status =1;
+                   $blog->save();
             }else{
-                   $brand = new Brand;
-                   $brand->brand_name = $request->brand_name;
-                   $brand->save();
+                   $blog = new Blog;
+                   $blog->title = $request->title;
+                   $blog->date = $request->date;
+                   $blog->details = $request->details;
+                   $blog->main = $request->main;
+                   $blog->latest = $request->latest;
+                   $blog->save();
             }
      }
 
@@ -95,4 +105,3 @@ class BrandController extends Controller
        }
     }
 }
-

@@ -18,6 +18,14 @@ window.User = User
 import Notification from './Helpers/Notification';
 window.Notification = Notification
 
+
+//editor
+/*require('tui-editor/dist/tui-editor.css');
+require('tui-editor/dist/tui-editor-contents.css');
+require('codemirror/lib/codemirror.css');
+var toastui = require('@toast-ui/vue-editor');
+var Editor = toastui.Editor;*/
+
 //pagination
 Vue.component('pagination', require('./components/partial/PaginationComponent.vue').default);
 
@@ -52,3 +60,10 @@ const app = new Vue({
     el: '#app',
     router
 });
+
+
+
+
+
+
+

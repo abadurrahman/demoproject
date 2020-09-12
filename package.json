@@ -24,6 +24,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "@toast-ui/vue-editor": "^2.4.0",
         "laravel-vue-pagination": "^2.3.1",
         "noty": "^3.2.0-beta",
         "sweetalert2": "^9.15.3",

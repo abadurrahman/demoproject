@@ -25,6 +25,14 @@ let edittag = require('./components/tag/edit.vue').default;
 let addbrand = require('./components/brand/create.vue').default;
 let allbrand = require('./components/brand/index.vue').default;
 let editbrand = require('./components/brand/edit.vue').default;
+//blog
+let allblog = require('./components/blog/index.vue').default;
+let addblog= require('./components/blog/create.vue').default;
+let editblog = require('./components/blog/edit.vue').default;
+ //blog_category
+let allblogcategory = require('./components/blog_category/index.vue').default;
+let addblogcategory = require('./components/blog_category/create.vue').default;
+let editblogcategory = require('./components/blog_category/edit.vue').default;
 //product
 let addproduct = require('./components/product/create.vue').default;
 let allproduct = require('./components/product/index.vue').default;
@@ -66,6 +74,14 @@ export const routes = [
   { path: '/add-product', component: addproduct , name:'add-product' },
   { path: '/all-product', component: allproduct , name:'all-product' },
   { path: '/edit-product', component: editproduct , name:'edit-product' },
+  //blog
+  { path: '/all-blog', component: allblog , name:'all-blog' },
+  { path: '/add-blog', component: addblog , name:'add-blog' },
+  { path: '/edit-blog', component: editblog , name:'edit-blog' },
+  //blog_category
+  { path: '/all-blogcategory', component: allblogcategory , name:'all-blogcategory' },
+  { path: '/add-blogcategory', component: addblogcategory , name:'add-blogcategory' },
+  { path: '/edit-blogcategory', component: editblogcategory , name:'edit-blogcategory' },
     //user
   { path: '/user-profile', component: userprofile , name:'user-profile' },
   { path: '/edit-profile', component: editprofile , name:'edit-profile' },

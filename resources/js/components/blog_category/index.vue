@@ -5,12 +5,12 @@
         <div class="header-body">
             <div class="row align-items-center py-4">
                 <div class="col-lg-6 col-7">
-                    <h6 class="h2 text-white d-inline-block mb-0">Brand</h6>
+                    <h6 class="h2 text-white d-inline-block mb-0">Blog Category</h6>
                     <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                         <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                             <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
-                            <li class="breadcrumb-item"><a href="#">Brand</a></li>
-                            <li class="breadcrumb-item active"><a href="#">Edit</a></li>
+                            <li class="breadcrumb-item"><a href="#">Blog Category</a></li>
+                            <li class="breadcrumb-item active"><a href="#">List</a></li>
                         </ol>
                     </nav>
                 </div>
@@ -22,8 +22,8 @@
    <div class="card" style="padding:25px;">
             <!-- Card header -->
             <div class="card-header">
-              <h3 class="mb-0">Brand</h3>
-              <router-link to="/add-brand" class="btn btn-sm btn-primary float-right">Add-Brand</router-link>
+              <h3 class="mb-0">Blog Category</h3>
+              <router-link to="/add-blogcategory" class="btn btn-sm btn-primary float-right">Add-Blog Category</router-link>
               <p class="text-sm mb-0">
               </p>
             </div>
@@ -53,21 +53,19 @@
                   <thead class="thead-light">
                    <tr role="row">
                      <th class="sorting_asc" style="width: 153px;">SL:</th>
-                     <th class="sorting_asc" style="width: 153px;">Brand Name:</th>
-                     <th class="sorting_asc" style="width: 153px;">Image:</th>
+                     <th class="sorting_asc" style="width: 153px;">Blog Category Name:</th>
                      <th class="sorting_asc" style="width: 153px;">Created At:</th>
                      <th class="sorting_asc" style="width: 153px;">Action:</th>   </tr>
                    </thead>
           
                 <tbody>                 
-                 <tr role="row" class="odd" v-for="(brand,index) in filtersearch" :key="brand.id">
+                 <tr role="row" class="odd" v-for="(blogcategory,index) in filtersearch" :key="blogcategory.id">
                     <td>{{index+1}}</td>
-                    <td>{{ brand.brand_name }}</td>
-                    <td><img :src="brand.photo" style="height:55px; width:45px;"></td>
-                    <td>{{ brand.created_at }}</td>
+                    <td>{{ blogcategory.blogcategory_name }}</td>
+                    <td>{{ blogcategory.created_at }}</td>
                     <td>
-                      <router-link :to="{name: 'edit-brand', params:{id: brand.id} }" class="btn btn-sm btn-info" href="">Edit</router-link>
-                      <a class="btn btn-sm btn-danger" style="color:white;" @click="deleteBrand(brand.id)">Delete</a>
+                      <router-link :to="{name: 'edit-blogcategory', params:{id: blogcategory.id} }" class="btn btn-sm btn-info" href="">Edit</router-link>
+                      <a class="btn btn-sm btn-danger" style="color:white;" @click="deleteBlogategory(blogcategory.id)">Delete</a>
                     </td>
                  </tr>
                 </tbody>
@@ -88,7 +86,7 @@
                 v-if="pagination.last_page > 1"
                 :pagination="pagination"
                 :offset="5"
-                @paginate="allBrand()"
+                @paginate="allBlogcategory()"
               ></pagination>
                 </ul>
               </div>
@@ -115,12 +113,12 @@
 
 
         created(){
-        this.allBrand();
+        this.allBlogcategory();
         },
 
         data(){
           return{
-            brands:[],
+            blogcategories:[],
             searchTerm:'',
             pagination: {
             current_page: 1
@@ -129,22 +127,22 @@
         },
        computed:{
          filtersearch(){
-          return this.brands.filter(brand => {
-             return brand.brand_name.match(this.searchTerm)
+          return this.blogcategories.filter(blogcategory => {
+             return blogcategory.blogcategory_name.match(this.searchTerm)
            })
          }
        },
         methods:{
-          allBrand(){
-            axios.get("/api/all-brand?page=" + this.pagination.current_page)
+          allBlogcategory(){
+            axios.get("/api/all-blogcategory?page=" + this.pagination.current_page)
            .then(response => {
-          this.brands = response.data.data;
+          this.blogcategories = response.data.data;
           this.pagination = response.data;
         })
          .catch()
           },
 
-          deleteBrand(id){
+          deleteBlogategory(id){
             Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -155,14 +153,14 @@
             confirmButtonText: 'Yes, delete it!'
           }).then((result) => {
             if (result.value) {
-              axios.get('/api/delete-brand/'+id)
+              axios.get('/api/delete-blogcategory/'+id)
               .then(()=>{
-                 this.brands = this.brands.filter(brand =>{
-                    return brand.id !=id
+                 this.blogcategories = this.blogcategories.filter(blogcategory =>{
+                    return blogcategory.id !=id
                  })
               })
               .catch(()=>{
-                 this.$router.push({name: 'all-brand'})
+                 this.$router.push({name: 'all-blogcategory'})
               })
               Swal.fire(
                 'Deleted!',
@@ -181,5 +179,5 @@
 </script>
 
 <style type="text/css">
- 
+  
 </style>

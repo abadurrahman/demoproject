@@ -127,7 +127,7 @@
 
                         <li class="nav-item">
                             <a class="nav-link" href="#coupon" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="coupon">
-                                <i class="ni ni-single-copy-04 text-green"></i>
+                                <i class="ni ni-badge text-info"></i>
                                 <span class="nav-link-text">Coupon</span>
                             </a>
                             <div class="collapse" id="coupon">
@@ -160,31 +160,44 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#user" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="user">
-                                <i class="ni ni-single-copy-04 text-black"></i>
-                                <span class="nav-link-text">User Role</span>
+                            <a class="nav-link" href="#blog" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="blog">
+                                <i class="ni ni-single-copy-04 text-green"></i>
+                                <span class="nav-link-text">Blog</span>
                             </a>
-                            <div class="collapse" id="user">
+                            <div class="collapse" id="blog">
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
-                                        <a href="" class="nav-link ">Create User</a>
+                                        <router-link to="/add-blog" class="nav-link ">Blog</router-link>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="" class="nav-link ">All User</a>
+                                        <router-link to="/all-blog" class="nav-link ">All Blog</router-link>
                                     </li>
                                 </ul>
-                        </div>
+                            </div>
+                        </li>
 
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="">
-                  <i class="ni ni-archive-2 text-green"></i>
-                  <span class="nav-link-text">Tags</span>
-                </a>
-              </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#blog_category" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="blog_category">
+                                <i class="ni ni-single-copy-04 text-green"></i>
+                                <span class="nav-link-text">Blog_Category</span>
+                            </a>
+                            <div class="collapse" id="blog_category">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <router-link to="/add-blogcategory" class="nav-link ">Blog_Category</router-link>
+                                    </li>
+                                    <li class="nav-item">
+                                        <router-link to="/all-blogcategory" class="nav-link ">All Blog_Category</router-link>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+
+              
             <li class="nav-item">
                 <a class="nav-link" href="#user" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="user">
-                    <i class="ni ni-single-copy-04 text-black"></i>
+                    <i class="ni ni-single-02 text-pink"></i>
                     <span class="nav-link-text">User Role</span>
                 </a>
                 <div class="collapse" id="user">
@@ -217,22 +230,7 @@
                  </ul>
                </div>
              </li>
-             <li class="nav-item">
-               <a class="nav-link" href="#navbar-forms" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-forms">
-                 <i class="ni ni-single-02 text-pink"></i>
-                 <span class="nav-link-text">Customers</span>
-               </a>
-               <div class="collapse" id="navbar-forms">
-                 <ul class="nav nav-sm flex-column">
-                   <li class="nav-item">
-                     <a href="/pages/tables/Orders.html" class="nav-link">Customers List</a>
-                   </li>
-                   <li class="nav-item">
-                     <a href="/pages/tables/Orders.html" class="nav-link">Wholesaler List</a>
-                   </li>
-                 </ul>
-               </div>
-             </li>
+             
              <li class="nav-item">
                <a class="nav-link" href="#navbar-tables" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-tables">
                  <i class="ni ni-archive-2 text-default"></i>
